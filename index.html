@@ -1535,17 +1535,10 @@ function impressumLaden() {
 // ── ONBOARDING ────────────────────────────────────────────────────────────────
 function onboardingClose() {
   document.getElementById('onboarding-overlay').classList.add('hidden');
-  try { localStorage.setItem('autoai_onboarded', '1'); } catch(e) {}
 }
 
 function onboardingCheck() {
-  try {
-    if (localStorage.getItem('autoai_onboarded')) {
-      document.getElementById('onboarding-overlay').classList.add('hidden');
-    }
-  } catch(e) {
-    document.getElementById('onboarding-overlay').classList.add('hidden');
-  }
+  // Onboarding immer anzeigen beim Start
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
